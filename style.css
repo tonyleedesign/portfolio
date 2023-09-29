@@ -28,7 +28,7 @@ main{
 
 /* spacing btw each nav link */
 
-.nav-links a {
+.main-nav {
 	margin: 0 0.5rem;
 }
 
@@ -58,6 +58,29 @@ main{
 	background-color: white;
 }
 
+/* chevron */
+
+.chevron-right {
+    transform: rotate(45deg);
+}
+
+.chevron {
+    width: .4rem;
+    height: .4rem;
+    border-top: 1.5px solid currentColor;
+    border-right: 1.5px solid currentColor;
+    vertical-align: middle;
+	display: none;
+}
+
+/* nav with chevron container */
+
+.link-chevron {
+	display: inline-flex;
+	align-items: center;
+	position: relative;
+	justify-content: center;
+}
 
 /* dropdown nav links */
 
@@ -72,11 +95,14 @@ main{
 		cursor: pointer;
 }
 
+
+
+/* nav dropdown */
+
 .dropdown {
+	margin: 0;
 	display: inline-block;
-	position: relative;
-	margin: 0 0.5rem;
-} 
+}
 
 .dropdown-menu {
 	position: absolute;
@@ -135,6 +161,8 @@ main{
 	padding: 1.5rem;
 	font-size: 1.5rem;
 }
+
+/* button */
 
 .primary-button {
 	cursor:pointer;
@@ -268,7 +296,11 @@ footer{
 		padding-top: 100px;
 	}
 
-	.nav-links a{
+	.chevron {
+		display: flex;
+	}
+
+	.link{
 		margin: 16px 0;
 	}
 
