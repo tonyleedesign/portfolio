@@ -6,154 +6,25 @@ body{
 	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
 	margin: 0;
-	background-color: #1C1C1C;
-	color: white;
 	position: relative;
 	min-height: 100%;
-	padding-bottom: 150px;
+	padding-bottom: 100px;
 }
 
 main{
-	margin: 5rem 10rem;
-}
-
-/* navbar */
-
-.nav{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-}
-
-/* spacing btw each nav link */
-
-.main-nav {
-	margin: 0 0.5rem;
-}
-
-/* hamburger menu alignment */
-
-.topnav {
-	display: flex; 
-	justify-content: space-between;
-	align-items: center;
-	padding: 1rem 0;
-}
-
-/* hamburger menu */
-
-.hamburger {
-	display: none;
-	cursor: pointer;
-}
-
-.bar {
-	display: block;
-	width: 25px;
-	height: 3px;
-	margin: 5px auto;
-	-webkit-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-	background-color: white;
-}
-
-/* chevron */
-
-.chevron-right {
-    transform: rotate(45deg);
-}
-
-.chevron {
-    width: .4rem;
-    height: .4rem;
-    border-top: 1.5px solid currentColor;
-    border-right: 1.5px solid currentColor;
-    vertical-align: middle;
-	display: none;
-}
-
-/* nav with chevron container */
-
-.link-chevron {
-	display: inline-flex;
-	align-items: center;
-	position: relative;
-	justify-content: center;
-}
-
-/* dropdown nav links */
-
-.link {
-		text-decoration: none;
-		color: white;
-		padding: 0;
-		font-size: inherit;
-		background: none;
-		border: none;
-		font-family: inherit;
-		cursor: pointer;
-}
-
-
-
-/* nav dropdown */
-
-.dropdown {
-	margin: 0;
-	display: inline-block;
-}
-
-.dropdown-menu {
-	position: absolute;
-	right: 0;
-	text-align: right;
-	width: 200px;
-	top: calc(100% + 1rem);
-	opacity: 0;
-	pointer-events: none;
-	transform: translateY(-10px);
-	transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-}
-
-.dropdown-item {
-	display: flex;
-	flex-direction: column;
-	padding: 0.2rem 0;
-	text-decoration: none;
-	color: white;
-	font-size: inherit;
-	font-family: inherit;
-	cursor: pointer;
-}
-
-.dropdown.active > .link + .dropdown-menu {
-	opacity: 1;
-	transform: translateY(0);
-	pointer-events: auto;
-}
-
-.dropdown button:hover{
-	text-decoration: none;
-}
-
-.logo {
-	font-size: 1.5rem;
-	text-decoration: none;
-	color: white;
-	padding: 0 0.5rem;
+	margin: 0 10rem 5rem 10rem;
 }
 
 /* homepage text */
 
 .header-text {
-	padding: 10% 10% 0 10%;
+	padding: 5% 10% 0 10%;
 	text-align: center;
 }
 
 .header-text h1 {
 	font-weight: 400;
-	font-size: 2.5vh;
+	font-size: 2rem;
 }
 
 .socials {
@@ -179,7 +50,7 @@ main{
 
 .primary-button:hover {
 	background-color: white;
-  	color: black;
+  color: black;
 }
 
 .primary-header{
@@ -191,29 +62,21 @@ main{
 /* case study cards */
 
 .card-container{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 100%;
-}
-
-.cards{
-	width: 49%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 3%;
 }
 
 .cards img{
 	width: 100%;
 	object-fit: cover;
+	cursor: pointer;
 }
 
-.cards a {
-	padding: 0;
-}
-
-.title{
+.title {
 	text-align: center;
 	font-weight: 500;
-	font-size: 3.5vh;
+	font-size: 2rem;
 }
 
 /* Footer */
@@ -229,6 +92,130 @@ footer{
 	position: absolute;
 }
 
+/* Lunchbox Casestudy */
+
+.lunchbox-home {
+	background: #212121;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: white;
+	padding: 3% 30% 10% 30%;
+	text-align: center;
+}
+
+.lunchbox-logo {
+	display: flex;
+	width: 8%;
+}
+
+.lunchbox-header-title {
+	font-weight: 400;
+	font-size: 3rem;
+	letter-spacing: .04em;
+	margin: 1rem;
+}
+
+.lunchbox-header-text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.125rem;
+	font-weight: 400;
+	line-height: 1.9em;
+	letter-spacing: .04em;
+}
+
+.disclaimer {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #848282;
+	font-size: 0.75rem;
+	font-style: italic;
+	margin: 32px 0;
+}
+
+.background-container {
+	background-image: url(./images/lunchbox/Landing+Page.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 10% 15% 7% 15%;
+}
+
+.designs {
+	width: 100%;
+}
+
+.section-container {
+	padding: 5% 30%;
+}
+
+.lunchbox-title {
+	font-weight: 400;
+	font-size: 2.5rem;
+}
+
+.lunchbox-text, li {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.9em;
+	letter-spacing: .03em;
+}
+
+.lunchbox-text {
+	margin: 3rem 0;
+}
+
+ol{
+	padding-left: 30px;
+	margin: 0;
+}
+
+.lunchbox-list {
+	margin-bottom: 1rem
+}
+
+.challenge {
+	background: #F5F6F7;
+}
+
+.research-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 2rem;
+	row-gap: 2rem;
+	margin: 8rem 0;
+}
+
+.research-title {
+	font-weight: 500;
+	font-size: 1.25rem;
+	margin-bottom: 0px;
+}
+
+.research-card > .lunchbox-text {
+	margin: 1rem 0;
+}
+
+.quote {
+	margin: 0 -20% ;
+	font-style: italic;
+	font-size: 1.25rem;
+	color: #978F8F;
+	text-align: center;
+}
+
+.quote-author{
+	text-align: center;
+}
+
+.understand-users {
+	background: #F5F6F7;
+}
+
+.identify-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	column-gap: 2rem;
+}
 @media (max-width: 1200px) {
 	.header-text h1 {
 		font-weight: 400;
@@ -238,18 +225,11 @@ footer{
 	main{
 		margin: 3rem 6rem;
 	}
-	.title{
-		font-size: 2.8vh;
-	}
 }
 
 @media (max-width: 1030px) {
 	.header-text h1 {
 		font-weight: 400;
-	}
-
-	main{
-		margin: 3rem 6rem;
 	}
 
 	.primary-button {
@@ -265,78 +245,25 @@ footer{
 	.cards p{
 		font-size: 1.6vh;
 	}
-	.hamburger{
-		display: block;
-	}
-
-	.hamburger.active .bar:nth-child(2){
-		opacity: 0;
-	}
-
-	.hamburger.active .bar:nth-child(1){
-		transform: translateY(8px) rotate(45deg);
-	}
-
-	.hamburger.active .bar:nth-child(3){
-		transform: translateY(-8px) rotate(-45deg);
-	}
-
-	.nav-links{
-		display: flex;
-		position: fixed;
-		left: -100%;
-		top: 0px;
-		gap: 0;
-		flex-direction: column;
-		background-color: #1c1c1c;
-		width: 100%;
-		height: 100%;
-		text-align: center;
-		transition: 0.3s;
-		padding-top: 100px;
-	}
-
-	.chevron {
-		display: flex;
-	}
-
-	.link{
-		margin: 16px 0;
-	}
-
-	.nav-links.active{
-		left: 0;
-	}
 }	
 
 @media (max-width: 842px) {
 	.card-container{
-		display: flex;
-		flex-direction: column;
-		gap: 100px;
-	}
-	
-	.cards{
-		width:100%;
+		display: grid;
+		grid-template-columns: 1fr;
+		row-gap: 3%;
 	}
 
 	main{
 		margin: 1.5rem 3rem;
 	}
 
-	.logo{
-		font-size: 1.25rem;
-	}
 }
 
 @media (max-width: 475px) {
 
 	.header-text {
 		padding: 10% 0 0 0;
-	}
-
-	.logo{
-		font-size: 1rem;
 	}
 
 	main{
