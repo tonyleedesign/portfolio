@@ -106,7 +106,7 @@ footer{
 
 .lunchbox-logo {
 	display: flex;
-	width: 8%;
+	width: 3rem;
 }
 
 .lunchbox-header-title {
@@ -154,7 +154,7 @@ footer{
 
 .lunchbox-text, li {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.9em;
 	letter-spacing: .03em;
@@ -214,8 +214,9 @@ ol{
 .identify-grid {
 	display: grid;
 	grid-template-columns: 1fr;
-	column-gap: 2rem;
+	row-gap: 2rem;
 }
+
 @media (max-width: 1200px) {
 	.header-text h1 {
 		font-weight: 400;
@@ -224,6 +225,14 @@ ol{
 
 	main{
 		margin: 3rem 6rem;
+	}
+
+	.lunchbox-home {
+		padding: 3% 20% 10% 20%;
+	}
+
+	.section-container {
+		padding: 5% 20%;
 	}
 }
 
@@ -258,6 +267,17 @@ ol{
 		margin: 1.5rem 3rem;
 	}
 
+	.lunchbox-home {
+		padding: 3% 15% 10% 15%;
+	}
+
+	.section-container {
+		padding: 5% 15%;
+	}
+
+	.research-grid {
+		grid-template-columns: 1fr
+	}
 }
 
 @media (max-width: 475px) {
@@ -268,5 +288,34 @@ ol{
 
 	main{
 		margin: 1.5rem;
+	}
+
+	.lunchbox-home {
+		padding: 3% 10% 10% 10%;
+	}
+
+	.section-container {
+		padding: 5% 10%;
+	}
+
+	.lunchbox-header-title {
+		font-size: 2rem;
+	}
+
+	.lunchbox-header-text {
+		font-size: 1rem;
+	}
+
+	.lunchbox-title {
+		font-size: 2rem;
+	}
+	
+	.lunchbox-text, li {
+		font-size: .9rem;
+	}
+
+	.quote {
+		margin: 0 -10% ;
+		font-size: 1rem;
 	}
 }
