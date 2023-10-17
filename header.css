@@ -24,6 +24,10 @@
 	color: white;
 }
 
+.chevron-right {
+	display: none;
+}
+
 /* hamburger menu */
 
 .hamburger {
@@ -41,41 +45,17 @@
 	background-color: white;
 }
 
-/* chevron */
-
-.chevron-right {
-    transform: rotate(45deg);
-}
-
-.chevron {
-  width: .4rem;
-  height: .4rem;
-  border-top: 1.5px solid currentColor;
-  border-right: 1.5px solid currentColor;
-  vertical-align: middle;
-	display: none;
-}
-
-/* nav with chevron container */
-
-.link-chevron {
-	display: inline-flex;
-	align-items: center;
-	position: relative;
-	justify-content: center;
-}
-
 /* dropdown nav links */
 
-.link {
-		text-decoration: none;
-		color: white;
-		padding: 0;
-		font-size: inherit;
-		background: none;
-		border: none;
-		font-family: inherit;
-		cursor: pointer;
+.link, .portfolio{
+	text-decoration: none;
+	color: white;
+	padding: 0;
+	font-size: inherit;
+	background: none;
+	border: none;
+	font-family: inherit;
+	cursor: pointer;
 }
 
 
@@ -85,19 +65,21 @@
 .dropdown {
 	margin: 0;
 	display: inline-block;
+	position: relative;
 }
 
 .dropdown-menu {
 	position: absolute;
-	right: 0;
 	text-align: right;
 	width: 200px;
 	top: calc(100% + 1rem);
+	right: 0;
 	opacity: 0;
 	pointer-events: none;
 	transform: translateY(-10px);
 	transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
 }
+
 
 .dropdown-item {
 	display: flex;
@@ -110,7 +92,7 @@
 	cursor: pointer;
 }
 
-.dropdown.active > .link + .dropdown-menu {
+.dropdown.active > .portfolio + .dropdown-menu {
 	opacity: 1;
 	transform: translateY(0);
 	pointer-events: auto;
@@ -157,6 +139,7 @@
 	.nav-links{
 		display: flex;
 		position: fixed;
+		justify-content: center;
 		left: -100%;
 		top: 0px;
 		gap: 0;
@@ -166,18 +149,37 @@
 		height: 100%;
 		text-align: center;
 		transition: 0.3s;
-		padding-top: 100px;
 	}
 
-	.chevron {
-		display: flex;
+	.chevron-right {
+		display: inline-block;
 	}
 
-	.link{
+	.link, .portfolio{
 		margin: 16px 0;
 	}
 
 	.nav-links.active{
+		left: 0;
+	}
+
+	.dropdown-menu {
+		display: flex;
+		position: fixed;
+		left: -100%;
+		text-align: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		gap: 1rem;
+		flex-direction: column;
+		background-color: #1c1c1c;
+		pointer-events: none;
+		transition: 0.3s;
+		}
+
+	.dropdown-menu.active {
 		left: 0;
 	}
 }	
@@ -190,7 +192,6 @@
 	.topnav{
 		padding: 1.5rem 3rem;
 	}
-
 }
 
 @media (max-width: 475px) {
@@ -202,4 +203,3 @@
 		padding: 1.5rem;
 	}
 }
-

@@ -1,15 +1,23 @@
 const hamburger = document.querySelector(".hamburger")
 const navlinks = document.querySelector(".nav-links")
+const dropdown = document.querySelector(".dropdown-menu")
+const link = document.querySelectorAll(".link")
+const portfolio = document.querySelector(".portfolio")
 
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     navlinks.classList.toggle("active");
+    dropdown.classList.remove("active");
 })
 
-document.querySelectorAll(".link").forEach(n => n.addEventListener("click", () => {
+link.forEach(n => n.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navlinks.classList.remove("active");
 }))
+
+portfolio.addEventListener("click", () => {
+    dropdown.classList.toggle("active");
+})
 
 document.addEventListener("click", e => {
     const isDropdownButton = e.target.matches("[data-dropdown-button]")
@@ -26,6 +34,8 @@ document.addEventListener("click", e => {
         dropdown.classList.remove("active")
     })
 })
+
+
 
 let slideIndex = 1;
 showSlides(slideIndex);
